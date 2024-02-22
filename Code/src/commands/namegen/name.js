@@ -36,9 +36,10 @@ module.exports = {
 						var randomSuffix = gen(suffix);
 						while(!checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())){
 							randomSuffix = gen(suffix);
+							checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())
 						}
 						for(j=0;j<i;j++) {
-							if(randomPrefix.toLowerCase()+randomSuffix==arr[j]) {
+							if(randomPrefix.toLowerCase()+randomSuffix.toLowerCase()==arr[j]) {
 								randomSuffix = gen(suffix);
 							}
 						}
@@ -56,9 +57,10 @@ module.exports = {
 						var randomPrefix = gen(prefix);
 						while(!checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())){
 							randomPrefix = gen(prefix);
+							checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())
 						}
 						for(j=0;j<i;j++) {
-							if(randomPrefix.toLowerCase()+randomSuffix==arr[j]) {
+							if(randomPrefix.toLowerCase()+randomSuffix.toLowerCase()==arr[j]) {
 								randomPrefix = gen(prefix);
 							}
 						}
@@ -77,9 +79,10 @@ module.exports = {
 				var randomSuffix = gen(suffix);
 				while(!checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())){
 					randomSuffix = gen(suffix);
+					checkname.isValid(randomPrefix.toLowerCase(),randomSuffix.toLowerCase())
 				}
 				for(j=0;j<i;j++) {
-					if(randomPrefix.toLowerCase()+randomSuffix==arr[j]) {
+					if(randomPrefix.toLowerCase()+randomSuffix.toLowerCase()==arr[j]) {
 						var randomSuffix = gen(suffix);
 					}
 				}
@@ -91,7 +94,7 @@ module.exports = {
 					reply += '\n' + randomPrefix.charAt(0).toUpperCase() + randomPrefix.slice(1).toLowerCase() + "-" + randomSuffix.toLowerCase();
 				}
 				else {
-					arr[i] = randomPrefix.toLowerCase() + randomSuffix;
+					arr[i] = randomPrefix.toLowerCase() + randomSuffix.toLowerCase();
 					reply += '\n' + randomPrefix.charAt(0).toUpperCase() + randomPrefix.slice(1).toLowerCase() + randomSuffix.toLowerCase();
 				};
 			}
